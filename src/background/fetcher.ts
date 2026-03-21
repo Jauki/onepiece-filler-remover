@@ -48,7 +48,7 @@ export const refreshEpisodeMap = async (): Promise<EpisodeMap> => {
  * it into an EpisodeMap (episode number → EpisodeType).
  */
 const fetchEpisodeMap = async (): Promise<EpisodeMap> => {
-    const response = await fetch(config.knowledgeSrc.toString());
+    const response = await fetch(config.knowledgeSrc);
 
     if (!response.ok) {
         throw new Error(`Failed to fetch episode list: ${response.status} ${response.statusText}`);

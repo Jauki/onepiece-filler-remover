@@ -8,7 +8,8 @@
     "https://www.animefillerlist.com/*"
   ],
   "background": {
-    "service_worker": "src/background/index.ts"
+    "service_worker": "src/background/index.ts",
+    "scripts": ["src/background/index.ts"]
   },
   "content_scripts": [{
     "matches": ["https://aniworld.to/*"],

@@ -1,0 +1,11 @@
+{
+  "knowledgeSrc": "https://www.animefillerlist.com/shows/one-piece",
+  "targetSrc": "https://aniworld.to/anime/stream/one-piece",
+  "cacheTTL": 86400000,
+  "episodeColors": {
+    "FILLER": "red",
+    "MIXED": "yellow",
+    "CANON": null
+  },
+  "seasonOffsets": [1, 62, 78, 92, 131, 144, 196, 229, 264, 337, 382, 408, 422, 523, 581, 643, 693, 749, 804, 878, 892, 1089]
+}
