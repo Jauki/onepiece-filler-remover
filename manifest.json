@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "One Piece Filler Filter",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://aniworld.to/*",
+    "https://www.animefillerlist.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/index.ts"
+  },
+  "content_scripts": [{
+    "matches": ["https://aniworld.to/*"],
+    "js": ["src/content/index.ts"]
+  }]
+}
