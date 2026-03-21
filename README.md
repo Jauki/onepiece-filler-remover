@@ -1,22 +1,35 @@
-# One Piece Filler remover
+# One Piece Filler Remover
 
-Just a Extension.
-Small weekend project that removes the filler episodes of one piece currently working for aniworld.to. Using bun + vite
-to test its capabilites.
+![](PluginShowcase.png)
+A small weekend browser extension that highlights filler episodes on [aniworld.to](https://aniworld.to/anime/stream/one-piece). Built with Bun + Vite.
 
-## General Idea
+## How it works
 
-Currently this is a basically just using a list of not filler episodes
-from: https://www.animefillerlist.com/shows/one-piece and fetches the list.
-It then highlights the episodes on (Aniworld)[https://aniworld.to] for now more to come.
+Fetches the episode list from [animefillerlist.com](https://www.animefillerlist.com/shows/one-piece), caches it locally (24h TTL), and colors episode links accordingly:
 
-The Colorscheme:
+| Color | Type |
+|-------|------|
+| Red | Filler |
+| Yellow | Mixed canon/filler |
+| None | Canon |
 
-- Red Epsiode ->**filler**
-- Yellow Epsiode -> **mixed/filler**
-- Without colors/std element color -> **canon**
+## Stack
+
+- **Manifest V3** browser extension
+- **Vite** + `vite-plugin-web-extension` for bundling
+- **node-html-parser** for scraping the filler list
+- **webextension-polyfill** for cross-browser storage & messaging
+
+## Install (dev)
+
+```bash
+bun install
+bun run build
+```
+
+Load the `dist/` folder as an unpacked extension in `chrome://extensions`.
 
 ## Future
 
-- user can give own colors
-- users can use it extension on different sites
+- User-configurable colors
+- Support for other sites and anime
