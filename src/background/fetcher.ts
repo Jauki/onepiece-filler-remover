@@ -72,7 +72,8 @@ const parseEpisodeMap = (html: string): EpisodeMap => {
     const episodeMap: EpisodeMap = {};
 
     for (const [divClass, episodeType] of Object.entries(DIV_CLASS_TO_EPISODE_TYPE)) {
-        const div = root.querySelector(`#Condensed .${CSS.escape(divClass)}`);
+        const escapedClass = divClass.replace(/\//g, '\\/');
+        const div = root.querySelector(`#Condensed .${escapedClass}`);
         if (!div) continue;
 
         for (const anchor of div.querySelectorAll(".Episodes a")) {
