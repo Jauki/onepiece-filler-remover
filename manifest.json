@@ -8,14 +8,13 @@
     "https://www.animefillerlist.com/*"
   ],
   "browser_specific_settings": {
-  "gecko": {
-    "id": "jauk.j@proton.me",
-    "strict_min_version": "109.0"
-  }
-},
+    "gecko": {
+      "id": "jauk.j@proton.me",
+      "strict_min_version": "109.0"
+    }
+  },
   "background": {
-    "service_worker": "src/background/index.ts",
-    "scripts": ["src/background/index.ts"]
+    "service_worker": "src/background/index.ts"
   },
   "content_scripts": [{
     "matches": ["https://aniworld.to/*"],
